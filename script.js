@@ -5,7 +5,8 @@ new Vue({
 	  texto:'Hola',
 	  style:"color: #999",
 	  myLink:'http://wwww.vue.com',
-	  lista:['primero', 'facundo', 'quiroga', 'cardozo']
+	  lista:['primero', 'facundo', 'quiroga', 'cardozo'],
+	  redat: true,
 	},
 	methods:{
 		upper:function(str){
@@ -15,7 +16,9 @@ new Vue({
 			event.preventDefault();
 			console.log(this);
 			console.log(event.target);
-		
+		},
+		colorChanger: function(){
+			 return this.redat = !this.redat
 		}
 	}
   });

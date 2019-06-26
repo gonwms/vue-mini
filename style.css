@@ -1,5 +1,13 @@
 td{
 	border: 1px solid black;
-	/* padding:30px */
-	
+}
+table{
+	margin:30px
+}
+.square{
+	display: block;
+	height: 100px;
+	width: 100px;
+	background: #4343ff !important;
+	margin:30px
 }
