@@ -1,11 +1,21 @@
-console.log('mandraco');
+/*jshint -W093*/
+
+Vue.component('lalala',{
+	data: function(){
+		return {
+			mensaje: 'eran los de luego',
+		};
+	},
+	template: '	<h3>Componentes {{mensaje}}</h3>'
+});
+
 new Vue({
 	el: '#app',
 	data: {
 	  texto:'Hola',
 	  style:"color: #999",
 	  myLink:'http://wwww.vue.com',
-	  lista:['primero', 'facundo', 'quiroga', 'cardozo'],
+	  lista:['Primero', 'Facundo', 'Quiroga', 'Cardozo'],
 	  redat: true,
 	},
 	methods:{
@@ -14,11 +24,12 @@ new Vue({
 		},
 		clickHandler: function(event){
 			event.preventDefault();
-			console.log(this);
+			// alert(this);
 			console.log(event.target);
 		},
 		colorChanger: function(){
-			 return this.redat = !this.redat
+			return this.redat = !this.redat;
 		}
 	}
   });
+  
