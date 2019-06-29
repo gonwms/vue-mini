@@ -14,15 +14,28 @@
 	<div id="app">
 		<!--open app-->
 
-		<h1 v-bind:style=style>{{texto}} {{upper('vue.js')}}</h1>
-		<p>
-			<a v-bind:href=myLink v-on:click=clickHandler> link </a>
-		</p>
-		<span v-for="(item,index) in lista">{{index}}.{{item}} | </span>
-		<div><button v-on:click=colorChanger>acción</button>
-			<div class="square" v-if=redat></div>
+		<h2>v-bind</h2>
+		<p v-bind:style=style>{{texto}} {{upper('vue.js')}}</p>
+		
+		<h2>v-on</h2>
+		<a v-bind:href=myLink v-on:click=clickHandler> link </a>
+		
+		<h2>v-for</h2>
+		<div>
+			<span v-for="(item,index) in lista">{{index}}.{{item}} | </span>
 		</div>
+		
+		<h2>v-if</h2>
+		<div>
+			<button v-on:click=toggleBox>acción</button>
+			<div class="square" v-if=showBox></div>
+		</div>
+		
+		<h2>component</h2>
 		<lalala></lalala>
+		
+		<h2>$refs</h2>
+		<a href="" ref="reference" v-on:click=getReference> ClicktoConsoleRefs</a>
 	
 		<!--close app-->
 	</div>

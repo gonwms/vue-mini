@@ -16,19 +16,23 @@ new Vue({
 	  style:"color: #999",
 	  myLink:'http://wwww.vue.com',
 	  lista:['Primero', 'Facundo', 'Quiroga', 'Cardozo'],
-	  redat: true,
+	  showBox: true,
 	},
 	methods:{
 		upper:function(str){
 			return str.toUpperCase();
 		},
-		clickHandler: function(event){
-			event.preventDefault();
+		clickHandler: function(e){
+			e.preventDefault();
 			// alert(this);
 			console.log(event.target);
 		},
-		colorChanger: function(){
-			return this.redat = !this.redat;
+		toggleBox: function(){
+			return this.showBox = !this.showBox;
+		},
+		getReference: function(e){
+			e.preventDefault();
+			console.log(this.$refs.reference);
 		}
 	}
   });
